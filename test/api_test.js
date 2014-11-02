@@ -5,6 +5,7 @@ var server = 'http://localhost:' + (process.env.PORT || 3000);
 var expect = chai.expect;
 var assert = chai.assert;
 
+require('../server.js');
 chai.use(chaihttp);
 
 describe('Simple JSON API', function() {
