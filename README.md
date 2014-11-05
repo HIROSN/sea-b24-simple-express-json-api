@@ -1,5 +1,7 @@
 Simple JSON API
 ==============================
+<img src="https://travis-ci.org/HIROSN/sea-b24-simple-express-json-api.svg" alt="Travis CI Badge"></img>
+
 A simple json api using express
 
 Instructions

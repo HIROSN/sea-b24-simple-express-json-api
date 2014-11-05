@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codefellows/sea-b24-simple-express-json-api.git"
+    "url": "https://github.com/HIROSN/sea-b24-simple-express-json-api.git"
   },
   "author": "tyler@codefellows.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codefellows/sea-b24-simple-express-json-api/issues"
+    "url": "https://github.com/HIROSN/sea-b24-simple-express-json-api/issues"
   },
-  "homepage": "https://github.com/codefellows/sea-b24-simple-express-json-api",
+  "homepage": "https://github.com/HIROSN/sea-b24-simple-express-json-api",
   "dependencies": {
     "express": "^4.9.8"
   },
@@ -26,6 +26,7 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-jscs": "^0.8.1",
-    "grunt-simple-mocha": "^0.4.0"
+    "grunt-simple-mocha": "^0.4.0",
+    "mocha": "^2.0.1"
   }
 }
