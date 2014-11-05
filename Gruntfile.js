@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
   var testFiles = ['test/**/*.js'];
   var srcFiles = ['*.js'].concat(testFiles);
@@ -12,7 +14,10 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      files: srcFiles
+      files: srcFiles,
+      options: {
+        jshintrc: true
+      }
     },
 
     jscs: {

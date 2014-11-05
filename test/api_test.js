@@ -1,3 +1,5 @@
+'use strict';
+
 var chai = require('chai');
 var chaihttp = require('chai-http');
 
