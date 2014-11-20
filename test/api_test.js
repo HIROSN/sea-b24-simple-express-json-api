@@ -5,7 +5,6 @@ var chaihttp = require('chai-http');
 
 var server = 'http://localhost:' + (process.env.PORT || 3000);
 var expect = chai.expect;
-var assert = chai.assert;
 
 require('../server.js');
 chai.use(chaihttp);
@@ -15,7 +14,7 @@ describe('Simple JSON API', function() {
     chai.request(server).
       get('/time').
       end(function(err, res) {
-        assert.equal(err, null);
+        expect(err).to.equal(null);
         expect(res).to.be.a('object');
         expect(res).to.have.status(200);
 
@@ -23,9 +22,10 @@ describe('Simple JSON API', function() {
         expect(res.text).to.have.length(8);
         expect(res.text).to.have.string(':');
 
-        assert(res.text.split(':')[0] == (new Date()).getHours(),
-          'unexpected hours');
-
+        var hms = res.text.split(':');
+        expect(+hms[0]).to.equal(new Date().getHours());
+        expect(+hms[1]).to.be.within(0, 59);
+        expect(+hms[2]).to.be.within(0, 59);
         done();
       });
   });
@@ -34,7 +34,7 @@ describe('Simple JSON API', function() {
     chai.request(server).
       get('/greeting/me').
       end(function(err, res) {
-        assert.equal(err, null);
+        expect(err).to.equal(null);
         expect(res).to.be.a('object');
         expect(res).to.have.status(200);
 

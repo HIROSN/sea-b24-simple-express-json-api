@@ -9,10 +9,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-simple-mocha');
 
   grunt.initConfig({
-    simplemocha: {
-      src: testFiles
-    },
-
     jshint: {
       files: srcFiles,
       options: {
@@ -25,9 +21,13 @@ module.exports = function(grunt) {
       options: {
         preset: 'google'
       }
+    },
+
+    simplemocha: {
+      src: testFiles
     }
   });
 
-  grunt.registerTask('test', ['jshint', 'simplemocha', 'jscs']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
   grunt.registerTask('default',  ['test']);
 };
